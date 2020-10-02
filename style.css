@@ -1,102 +1,81 @@
 *{
 	margin: 0;
 	padding: 0;
-}
-body{
-	font-family: sans-serif;
+	box-sizing: border-box;
 }
 .nav{
 	background-color: #333333;
-	height: 70px;
-	width: 100%;
+	display: flex;
+	justify-content: flex-end;
 }
-label.logo{
-	font-size: 25px;
-	color: white;
-	line-height: 80px;
-	padding:0px 20px;
-}
-.nav ul{
-	float: right;
-	margin-right: 20px;
-}
-.nav ul li {
-	display: inline;
-	list-style: none;
-	line-height: 80px;
-	margin: 0px 10px;
-}
-.nav ul li a{
+.nav a{
 	text-decoration:none;
 	font-size: 18px;
-	color:#a9a9a9;
+	font-family: sans-serif;
+	color: #a9a9a9;
+	line-height: 80px;
+	padding: 0px 20px;
 }
-.nav ul li a:hover{
+.nav a:hover{
   	color: white;
-  	transition: .5s;
 }
-	
-.checkbtn{
-  	font-size: 30px;
-  	color: #a9a9a9;
-  	float: right;
-  	margin-right: 20px;
- 	cursor: pointer;
-  	display:none;
-  	border: 1px solid;
-  	border-radius: 5px;
-  	padding: 2px 13px;
-  	height: 35px;
-  	margin-top: 20px;
+#btn{
+	display: none;
 }
-.checkbtn:hover{
-	border-color: white;
-	box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.btnarea{
+	background-color: #333333;
+	padding: 10px;
+	display: flex;
+	justify-content: flex-end;
+	color: white;
 }
-#check{
-  	display: none;
+.btnarea label{
+	border: 1px solid white;
+	border-color: #a9a9a9;
+	border-radius: 6px;
+	height: 60px;
+	width: 60px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
-@media (max-width: 980px){
-   label.logo{
-    font-size: 20px;
-    padding-left: 20px;
-  }
-  .checkbtn{
-    display: block;
-  }
-  ul {
-    position: absolute;
-    width: 100%;
-    height: 70%;
-    background: #333333;
-    top: 70px;
-    left: -100%;
-    text-align: left;
-    transition: all .5s;
-  }
-  .nav ul li{
-    display: block;
-    line-height: 30px;
-    margin-top: 10px;
-  }
-  .nav ul li a{
-    font-size: 15px;
-    margin-top: 50px;
-    margin-left:10px;
-  }
-  .nav ul li a:hover{
-    background: none;
-    color: white;
-  }
-  #check:checked ~ ul{
-    left: 0;
-  }
+.btnarea label span{
+	background-color: #a9a9a9;
+	height: 4px;
+	width: 60%;
+	margin: 3px 0px;
+
 }
-h1{
+.btnarea{
+	display: none;
+}
+
+@media screen and (max-width: 984px)
+{
+	.nav
+	{
+		flex-direction: column;
+		display: none;
+	}
+	#btn:checked + .nav
+	{
+		display: flex;
+	}
+	.btnarea
+	{
+		display: flex;
+	}
+}
+.content h1{
 	font-size: 40px;
+	font-family: sans-serif;
+	margin: 10px 10px;
 }
-p{
+.content p{
 	text-align: justify;
 	font-family: 'calibri';
 	font-size: 20px;
+	margin: 10px 10px;
 }
